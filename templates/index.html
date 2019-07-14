@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Flack
+{% endblock %}
+
+{% block main %}
+
+    <!-- Modal for registering user -->
+    <div class="modal" id="registerModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <center>
+                        <h3>Join Flack!</h3>
+                        <p>Connect with people all around the World!</p>
+                        <p>Enter a display name to get started!!!</p>
+                        <form id="register_form">
+                            <div class="form-group">
+                                <input type="text" autocomplete="off" autofocus name="username" id="username" placeholder="Display name..." class="form-control" required style="width: 65%;">
+                            </div>
+                            <button type="submit" class="btn btn-outline-light" style="width: 105px;">Register</button>
+                        </form>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for changing display name -->
+    <div class="modal" id="change_name_modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <center>
+                        <h3>Flack</h3>
+                        <p>Enter new display name:</p>
+                        <form id="change_name_form">
+                            <div class="form-group">
+                                <input type="text" autocomplete="off" autofocus name="new_username" id="new_username" placeholder="New display name..." class="form-control" required style="width: 65%;">
+                            </div>
+                            <button type="submit" class="btn btn-outline-light" style="width: 105px;">Change</button>
+                        </form>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contents to display after logged in -->
+    <div id="display">
+        <div class="row" style="width: 100%;">
+            <div class="col-lg-3">
+                <div class="jumbotron jumbotron1">
+
+                    <div class="row">
+                        <!-- Username -->
+                        <h5 id="display_username" style="color: aliceblue; font-family: cursive;"></h5>
+                    </div>
+                    
+                    <div class="row">
+                        <!-- Channel creation form -->
+                        <form id="create_channel_form">
+                            <div class="form-group">
+                                <input type="text" autocomplete="off" name="channel" id="channel" placeholder="Channel name..." class="form-control form-control-sm" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm">Create</button>
+                        </form>
+                    </div>
+
+                    <div class="row">
+                        <!-- Channel list -->
+                        <label>Channel list:</label>
+                        <div id="container" class="channels">
+                            <div id="channels" style="max-height: 293px;">
+                                {% for channel in channels %}
+                                    <div class="row" style="text-align: center; display: block;">
+                                        <button class="btn btn-link" data-channel="{{ channel }}">{{ channel }}</button>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Chat section -->
+            <div class="col-lg-9">
+                <div id="chat" style="height: 99.7%; display: block;">
+
+                    <!-- Channel Name on top -->
+                    <div class="jumbotron jumbotron2">
+                        <h2 id="channel_name"></h2>
+                    </div>
+
+                    <!-- Message section -->
+                    <div class="container messages" id="chatbox">
+                        <div id="messages"></div>
+                    </div>
+
+                    <!-- Form to send messages -->
+                    <div class="jumbotron jumbotron3">
+                        <form class="form-inline" id="send_message_form">
+                            <div class="form-group" style="width: 90%;">
+                                <textarea type="text" id="message" class="form-control" autocomplete="off" placeholder="Type a message..." style="width: 98.7%;" autofocus></textarea>
+                            </div>
+                            <button type="submit" id="sendbutton" class="btn btn-primary" style="width: 10%;">Send</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

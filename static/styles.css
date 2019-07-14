@@ -1,0 +1,132 @@
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 3.5rem;    /* Footer height */
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40!important;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    height: 3.5rem;            /* Footer height */
+}
+
+.modal-content {
+    background: black;
+    color: whitesmoke;
+    border-radius: 0px;
+}
+
+.modal-dialog {
+    background: whitesmoke;
+    border-style: ridge;
+    border-radius: 0;
+    margin-top: 100px;
+}
+
+.jumbotron1 {
+    background: #6c757d82;
+    color: aliceblue;
+    border-radius: 0px;
+    border-style: ridge;
+    border-color: antiquewhite;
+    font-family: sans-serif;
+    padding-top: 8px;
+    margin-bottom: 0px;
+    height: 491px;
+}
+
+.jumbotron1 > .row {
+    padding-top: 8px;
+    text-align: center;
+    display: block;
+}
+
+.channels {
+    height: 294px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #d5eeffa3;
+}
+
+.jumbotron2 {
+    padding: 0.8%;
+    margin-left: -30px;
+    background: #e9ecefbd;
+    border-radius: 0px;
+    text-align: left;
+    width: 106.50%;
+    border-style: ridge;
+    height: 13.4%;
+}
+
+.messages {
+    height: 330px;
+    margin-top: -20px;
+    margin-left: -40px;
+    overflow-y: scroll;
+    width: 107.5%;
+    display: flex;
+    flex-direction: column-reverse;
+    white-space: pre;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.jumbotron3 {
+    padding: 0.97%;
+    margin-left: -30px;
+    background: #e9ecefbd;
+    border-radius: 0px;
+    text-align: left;
+    width: 106.50%;
+    border-style: ridge;
+    margin-bottom: 0px;
+}
+
+body {
+    background-image: url("https://wallpapercave.com/wp/wp2712818.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.jumbotron4 {
+    padding: 0.5%;
+    background: rgba(0, 250, 154, 0.88);
+    padding-left: 8px;
+    margin-left: 10px;
+    font-family: serif;
+    color: #003d3d;
+    margin-bottom: 15px;
+}
+
+.jumbotron5 {
+    padding: 0.5%;
+    background: rgba(249, 134, 134, 0.88);
+    padding-left: 8px;
+    margin-left: 10px;
+    font-family: serif;
+    color: #7a1f1f;
+    margin-bottom: 15px;
+}
+
+.jumbotron6 {
+    padding: 0.5%;
+    text-align: center;
+    background: rgba(64, 224, 208, 0.81);
+    font-family: cursive;
+    margin-bottom: 14px;
+    margin-left: 10px;
+    width: fit-content;
+    color: darkslateblue;
+    font-size: 14px;
+}
